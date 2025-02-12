@@ -1,0 +1,136 @@
+:root {
+  --bg-color: #fbf1c7;
+  --fg-color: #3c3836;
+  --primary-color: #d79921;
+  --secondary-color: #b16286;
+  --accent-color: #689d6a;
+  --border-color: #928374;
+  --button-text: #ffffff;
+}
+
+.dark-theme {
+  --bg-color: #282828;
+  --fg-color: #ebdbb2;
+  --primary-color: #fabd2f;
+  --secondary-color: #d3869b;
+  --accent-color: #8ec07c;
+  --border-color: #504945;
+  --button-text: #1d2021;
+}
+@font-face {
+  font-family: "os_luizi_round_ffcregular";
+  src: url("fonts/os_luizi_round-ffc-web.woff2") format("woff2"), url("fonts/os_luizi_round-ffc-web.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "os_luizi_round_ffcregular";
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
+#horoscope-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  max-width: 60vw;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, border 0.3s;
+}
+
+.columns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  transition: background 0.3s, border 0.3s;
+}
+/* Columns */
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+  text-align: center;
+}
+
+/* Zodiac Cards */
+.zodiac {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, border 0.3s;
+}
+
+.zodiac:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s, border 0.3s;
+}
+
+/* Zodiac Images */
+.zodiac img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+/* Zodiac Titles */
+.zodiac h3 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* Horoscope Text */
+.zodiac p {
+  font-size: 0.9rem;
+  color: var(--fg-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--button-text);
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Download Button */
+#download-horoscope {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: var(--button-text);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--font-family);
+  transition: background 0.3s, border 0.3s;
+}
+
+#download-horoscope:hover {
+  background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 400px) {
+}

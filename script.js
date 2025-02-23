@@ -19,7 +19,7 @@ function downloadHoroscope() {
   const container = document.getElementById("horoscope-container");
 
   html2canvas(container, {
-    // scale: 1, // Increase scale factor (3x resolution for sharpness)
+    scale: 2, // Increase scale factor (3x resolution for sharpness)
     // useCORS: true, // Handle cross-origin images if needed
   }).then((canvas) => {
     const link = document.createElement("a");
